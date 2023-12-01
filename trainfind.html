@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Train</title>
+    <link rel="stylesheet" href="find.css"
+</head>
+<body style="background-image: url(https://media.istockphoto.com/id/516799836/photo/londons-underground.webp?s=170667a&w=0&k=20&c=oDC9-papIgzBuC7oSzlNK0AE1_04AIse5S1r5UP5ON8=); background-attachment: fixed; background-size: cover;">
+    <p><b>Passengers can check the real-time status of their booked trains, including arrival time, departure time, delays, and platform information, ensuring a smooth journey.</b></p>
+    <form>
+        <h3>Find Train</h3>
+        <div class="find-train">
+            <label for=" trainno"><b>Train No:</b></label>
+            <input type="number" name="number" id="number" required><br>
+            <label for="day"><b>Journey-day:</b></label>
+            <select name="day" id="day" required>
+                <option value="">select one</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="today">Today</option>
+                <option value="tomorrow">Tomorrow</option>
+            </select>
+        </div>
+        <br>
+        <button>Search</button>
+    </form>
+    
+</body>
+</html>

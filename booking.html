@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket-Booking</title>
+    <link rel="stylesheet" href="ticket.css">
+</head>
+<body style="background-image: url(https://images.unsplash.com/photo-1608461127691-760666cf8cd5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D); background-attachment: fixed; background-size: cover;">
+    <form id="reservationForm">
+        <h2 class="title">Ticket Booking</h2>
+        <div class="login">
+            <label for="username"><b>Name: </b></label>
+            <input type="text" name="username" id="username" placeholder="username" required><br>
+            <label for="age"><b>Age </b></label>
+            <input type="text" name="age" id="age" placeholder="Age" required><br>
+            <label for="gender"><b>Gender:</b></label>
+            <select name="gender" name="gender" id="gender" required>
+                <option value="">Please select one…</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+            <label><b>Train NO:</b></label>
+            <input type="text" name="trainno" id="trainno" required><br>
+            <label><b>From:</b></label>
+            <select name="from" id="from" required>
+                <option value="">From</option>
+                <option value="madhubani">Madhubani</option>
+                <option value="delhi">Delhi</option>
+                <option value="patna">Patna</option>
+                <option value="punjab">Punjab</option>
+                <option value="ludiyana">Ludiyana</option>
+            </select><br>
+            <label><b>To:</b></label>
+            <select name="to" id="to" required>
+                <option value="">TO</option>
+                <option value="madhubani">Madhubani</option>
+                <option value="delhi">Delhi</option>
+                <option value="patna">Patna</option>
+                <option value="punjab">Punjab</option>
+                <option value="ludiyana">Ludiyana</option>
+            </select><br>
+            <label><b>Journey Date</b></label>
+            <input type="date" name="journy" id="journey" required>
+            <label for="preference"><b>Preference:</b></label>
+            <select name="preference" id="preference" required>
+                <option value="">Please select one</option>
+                <option value="tatkal">Tatkal</option>
+                <option value="Ladies">Ladies</option>
+                <option value="sr.citizen">Sr.citizen</option>
+                <option value="dutepass">Dute-pass</option>
+            </select>
+            <label for="berth"><b>berth:</b></label>
+            <select name="berth" id="berth" required>
+                <option value="">Please select one</option>
+                <option value="sleeper">sleeper (SL)</option>
+                <option value="secondsitting">Second sitting (2S)</option>
+                <option value="Firstclass">First Class (1A)</option>
+                <option value="AC2">AC 2 Tier (2A)</option>
+                <option value="AC3">AC 3 Tier (3A)</option>
+                <option value="ac3economy">AC 3 Economy (3E)</option>
+            </select><br>
+            <br>
+            <button type="button" onclick="bookTicket()">Book Ticket</button>
+        </div>
+        <div id="bookingStatus"></div>
+    </form>
+    <script>
+        function bookTicket() {
+          // Get form values
+          var username = document.getElementById("username").value;
+          var age = document.getElementById("age").value;
+          var gender = document.getElementById("gender").value;
+          var trainno = document.getElementById("trainno").value;
+          var from = document.getElementById("from").value;
+          var to = document.getElementById("to").value;
+          var journey = document.getElementById("journey").value;
+          var preference = document.getElementById("preference").value;
+          var berth = document.getElementById("berth").value;
+    
+          // Display booking status
+          var bookingStatus = document.getElementById("bookingStatus");
+          bookingStatus.innerHTML = `
+            <h2>Booking Status</h2>
+            <p>UserName: ${username}</p>
+            <p>AGE: ${age}</p>
+            <p>Gender: ${gender}</p>
+            <p>Train Number: ${trainno}</p>
+            <p>From: ${from}</p>
+            <p>TO: ${to}</p>
+            <p>Journey: ${journey}</p>
+            <p>Preference: ${preference}</p>
+            <p>Berth: ${berth}</p>
+            <p>Booking Successful!</p>
+          `;
+        }
+</script>
+        
+    <p><b>Booking train tickets through the system is simple and efficient, offering users the convenience to choose their preferred train, class, and seat, and make secure online payments.<br>
+        Reserved tickets may be booked up to 120 days in advance on the Indian Railway Catering and Tourism Corporation website, smartphone apps, SMS, rail reservation counters at train stations, or through private ticket booking counters. A Tatkal train ticket can be booked by passengers who want to travel at short notice with a reserved seat or berth, but such tickets are sold at higher fares than regular advance reservation tickets.[150]
+
+        Confirmed reservation tickets will show the passenger and fare details along with berth or seat number(s) allocated to them on the ticket. If the reservation is not available on a particular train, the ticket has a wait-list number. A person with a wait-listed ticket must wait for enough cancellations to obtain a confirmed ticket. If their ticket is not confirmed on the day of departure, they cannot board the train. Reservation against cancellation tickets, between the waiting and confirmed lists, allow a ticket holder to board the train and obtain a seat chosen by a ticket collector after the collector has found a vacant seat.</b></p>
+</body>
+</html>
